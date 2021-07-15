@@ -1,3 +1,36 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+#index-table{
+    border: 1px solid black;
+} 
+.button a{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+#category-index{
+    display: flex;
+    justify-content: center;
+}
+#h1-index{
+    display: flex;
+    justify-content: center;
+    padding-right: 40px;
+    margin-top: 40px;
+}
+#add-category{
+    margin-left: 40px;
+   color: green;
+}
+#devise-main{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: black;
+    padding: 30px;
+    font-size: 10px;
+    margin-bottom: 20px;
+    color: white;
+}

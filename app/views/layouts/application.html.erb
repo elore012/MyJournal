@@ -11,12 +11,17 @@
   </head>
 
   <body>
+  <div id="devise-main">
+  <div>
   <% if user_signed_in? %>
-  <button><%= link_to 'Signout',destroy_user_session_path %></button>
+  <h1> Welcome <%=current_user.email%></h1>
+  <button class="button"><%= link_to 'Signout',destroy_user_session_path,method: :delete,data:{confirm:"ok"}%></button>
   <%else%>
-  <button><%= link_to 'Sign in', new_user_session_path %></button>
-  <button><%= link_to 'Sign up', new_user_registration_path %></button>
+  <button class ="button"><%= link_to 'Sign in', new_user_session_path %></button>
+  <button class ="button"><%= link_to 'Sign up', new_user_registration_path %></button>
   <%end%>
+  </div>
+  </div>
     <%= yield %>
   </body>
 </html>
