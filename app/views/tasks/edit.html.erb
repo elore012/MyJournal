@@ -1,0 +1,27 @@
+<h1>Editing Task</h1>
+
+
+<%= form_with model: [@categories, @task] do |form| %>
+   
+  <div>
+    <%= form.label :Task_name %>
+    <%= form.text_field :taskname%>
+    </div>
+    <br>
+    <div>
+    <%= form.label :Description %>
+    <%= form.text_field :taskbody%>
+    </div>
+    <br>
+    <div>
+    <%= form.label :Time %>
+    <%= form.text_field :tasktime%>
+    </div>
+    <br>
+  
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+  
+

@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1> Category Details </h1>
+<div>
+  <%= @categories.categoryname %>
+</div>
+<br>
+<div>
+  <%= @categories.categorybody %>
+</div>
+<br>
+
+
+
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>
+<%= link_to 'Task index', category_tasks_path(@category,@category.tasks) %>

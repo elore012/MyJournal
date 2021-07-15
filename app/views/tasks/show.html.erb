@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<h1> Task details </h1>
+<table>
+
+<tr>
+<td><%= @task.taskname %></td>
+<td><%= @task.taskbody %></td>
+<td><%= @task.tasktime %></td>
+<td><button><%= link_to 'Delete', @categories , method: :delete,data:{confirm: "delete?"} %></button></td>
+</table>
+
