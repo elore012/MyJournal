@@ -1,29 +1,29 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Tasks</h1>
-
+<div id="task-main">
+ 
+<div id="task-index-table">
 <table>
   <thead>
     <tr>
-      <th colspan="3"></th>
+      <th colspan="5"><h1>Task List</h1></th>
     </tr>
   </thead>
 
-  <tbody>
-    <% @tasks.each do |task| %>
-      <tr>
+<tbody>
+  <% @tasks.each do |task| %>
+    <tr>
       <% if task.user == current_user %>
         <td> <%= task.taskname %> </td>
         <td> <%= task.taskbody %> </td>
         <td> <%= task.tasktime %>  </td>
+        <td> <button class="button"><%= link_to 'Show details', category_task_path(@categories,task.id ) %></button></td>
+        <td> <button class="button"> <%= link_to 'Back to Category', category_path(@categories) %></button></td>
       <%end%>
-        </tr>
-        <%end%>
-      
-   
-  </tbody>
+    </tr>
+  <%end%>
+</tbody>
 </table>
-
-<br>
+</div>
+</div>
 
 

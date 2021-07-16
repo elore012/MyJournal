@@ -1,5 +1,5 @@
 <div id="main-create-task"
-<div >
+<div>
 
 <div id="newtask-form>"
 <%= form_with model: [@categories,@categories.tasks.build] do |form| %>
@@ -15,6 +15,7 @@
     
   <% end %>
   </div>
+  
  <div id="create-task">
   <div>
   <h1>New Task</h1>
@@ -38,8 +39,8 @@
 </div>
       <br>
 
-<div class="actions">
-      <%= form.submit %>
+      
+      <%=form.submit "Submit" %>
 </div>
 </div>
     <% end %>

@@ -9,6 +9,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/1 or /tasks/1.json
   def show
+    @categories= Category.find(params[:category_id])
     
   end
 
@@ -22,6 +23,7 @@ class TasksController < ApplicationController
   # GET /tasks/1/edit
   def edit
    @categories = Category.find(params[:category_id])
+   @task = Task.find(params[:id])
   end
 
   # POST /tasks or /tasks.json
@@ -34,7 +36,7 @@ class TasksController < ApplicationController
       if @task.save
         redirect_to categories_path
       else
-        render :new
+        redirect_to category_path
       end
     
   end

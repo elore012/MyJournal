@@ -1,12 +1,57 @@
 <p id="notice"><%= notice %></p>
 
-<h1> Task details </h1>
-<table>
+<div id="showcss">
+    <div id="category-show">
+        <div>
+        <h1> Task Details </h1>
+        </div>
+        <br>
 
-<tr>
-<td><%= @task.taskname %></td>
-<td><%= @task.taskbody %></td>
-<td><%= @task.tasktime %></td>
-<td><button><%= link_to 'Delete', @categories , method: :delete,data:{confirm: "delete?"} %></button></td>
-</table>
+        <div>
+        Task name: <%= @task.taskname %>
+        </div>
+        <br>
+        
+        <div>
+        Description : <%= @task.taskbody %>
+        </div>
+        <br>
+
+        <div>
+        Estimated time to complete :  <%= @task.tasktime %>
+        </div>
+        <br>
+
+        <div>
+        Task Category id :  <%= @task.category_id %>
+        </div>
+        <br>
+
+        <div>
+        User id : <%= @task.user_id %>
+        </div>
+        <br>
+
+        <div>
+        Created Time: <%= @task.created_at %>
+        </div>
+        <br>
+
+        <div>
+        Updated Time: <%= @task.updated_at %>
+        </div>
+        <br>
+    </div>
+</div>
+
+<div id="task-showlinks">
+    <div id="task-show-buttons">
+        <div><button class="button"><%= link_to 'Edit', edit_category_task_path %></button> </div><br>
+        <div><button class="button"><%= link_to 'Back to Task List', category_tasks_path %></button></div>
+        <div><button class="button"><%= link_to 'Delete', @categories , method: :delete, data: {confirm: "Delete this task?"}%></button></div>
+        <div><button class="button"><%= link_to 'Homepage', categories_path %></button> </div><br>
+       
+    <div>
+</div>
+    
 
