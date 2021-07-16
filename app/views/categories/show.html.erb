@@ -1,18 +1,43 @@
 <p id="notice"><%= notice %></p>
+<div id="showcss">
+<div id="category-show">
 
-<h1> Category Details </h1>
+<div><h1 h1> Category Details </h1>
+</div>
 <div>
-  <%= @categories.categoryname %>
+  Category name: <%= @categories.categoryname %>
 </div>
 <br>
 <div>
-  <%= @categories.categorybody %>
+ Description : <%= @categories.categorybody %>
 </div>
 <br>
+<div>
+
+  User id:  <%= @categories.user_id %>
+</div>
+<br>
+<div>
+
+  Time created: <%= @categories.created_at %>
+</div>
+<br>
+<div>
+  Update Time: <%= @categories.updated_at %>
+</div>
+<br>
+</div>
+
+</div>
+
+<div id="category-showlinks">
+
+<div><button class="button"><%= link_to 'Edit', edit_category_path(@category) %></button> </div><br>
+<div><button class="button"><%= link_to 'Back', categories_path %></button></div>
+<div><button class="button"><%= link_to 'Add Task', new_category_task_path(@categories,@task) %></button></div>
+
+</div>
 
 
 
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
-<%= link_to 'Task index', category_tasks_path(@category,@category.tasks) %>

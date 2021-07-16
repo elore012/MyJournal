@@ -1,3 +1,29 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+#create-task{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    align-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px black;
+    margin-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: lightgreen;
+
+    
+}
+#main-create-task{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    
+}
+#newtask-form{
+    border:1px solid black;
+}

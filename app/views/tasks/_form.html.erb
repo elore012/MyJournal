@@ -1,32 +1,49 @@
-<%= form_with model: [@task,@task.tasks.build] do |form| %>
+<div id="main-create-task"
+<div >
+
+<div id="newtask-form>"
+<%= form_with model: [@categories,@categories.tasks.build] do |form| %>
   <% if task.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
 
       <ul>
-        <% task.errors.each do |error| %>
+  <% task.errors.each do |error| %>
           <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
   <% end %>
-<div>
-  <%= form.label :Task_name %>
-  <%= form.text_field :taskname%>
+      </ul>
+    
+  <% end %>
   </div>
-  <br>
+ <div id="create-task">
   <div>
-  <%= form.label :Description %>
-  <%= form.text_field :taskbody%>
-  </div>
-  <br>
-  <div>
-  <%= form.label :Time %>
-  <%= form.text_field :tasktime%>
-  </div>
-  <br>
+  <h1>New Task</h1>
+</div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+<div>
+      <%= form.label :Task_name %>
+      <%= form.text_field :taskname%>
+</div>
+      <br>
+
+<div>
+      <%= form.label :Description %>
+      <%= form.text_area :taskbody%>
+</div>
+      <br>
+
+<div>
+      <%= form.label :Time %>
+      <%= form.text_field :tasktime%>
+</div>
+      <br>
+
+<div class="actions">
+      <%= form.submit %>
+</div>
+</div>
+    <% end %>
+   
+</div>
+</div>
+</div>

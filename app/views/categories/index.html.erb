@@ -18,12 +18,13 @@
   <tbody>
     <% @categories.each do |category| %>
       <tr>
-      <td>Category id <%= category.id %></td>
-      
+      <%if category.user == current_user %>
+        <td>Category id <%= category.id %></td>
         <td><button class ="button"><%= link_to 'Show', category %></button></td>
         <td><button class ="button"><%= link_to 'Edit', edit_category_path(category) %></button></td>
         <td><button class ="button"><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Delete associated task first :(' } %></button></td>
-      </tr>
+     <%end%>
+        </tr>
     <% end %>
   </tbody>
 </table>

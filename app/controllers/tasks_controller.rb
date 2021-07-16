@@ -15,7 +15,8 @@ class TasksController < ApplicationController
   # GET /tasks/new
   def new
     
-    @task = current_user.categories.find(params[:category_id])
+    @categories = current_user.categories.find(params[:category_id])
+    @task = Task.new
   end
 
   # GET /tasks/1/edit
