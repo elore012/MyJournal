@@ -10,16 +10,32 @@
       </ul>
     </div>
   <% end %>
+<div style="display: flex; justify-content:center">
+  <div id = "create-category">
+    <div> 
+        <h1>New Category</h1> 
+    </div>
 
-    
-    <div><%= form.label :Category_name %></div>
-    <div><%= form.text_field :categoryname%></div>
-    <br>
-    <div><%= form.label :Description %></div>
-    <div><%= form.text_area :categorybody%></div>
+    <div>
+        <%= form.label :Category_name %>
+        <%= form.text_field :categoryname%>
+    </div>
     <br>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <div>
+        <%= form.label :Description %>
+        <%= form.text_area :categorybody%>
+    </div>
+    <br>
+
+    <div class="actions">
+        <%= form.submit %>
+    </div>
+    <br>
+
+    <div>
+         <button class="button" style= "margin-left=0; padding-left=0;"><%= link_to 'Back', categories_path %></button>
+    </div>
+</div>
+</div>
 <% end %>
