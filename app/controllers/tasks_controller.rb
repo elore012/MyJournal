@@ -9,7 +9,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/1 or /tasks/1.json
   def show
-    @categories= Category.find(params[:category_id])
+    
     
   end
 
@@ -36,7 +36,7 @@ class TasksController < ApplicationController
       if @task.save
         redirect_to categories_path
       else
-        redirect_to category_path
+        render :new
       end
     
   end
@@ -54,7 +54,6 @@ class TasksController < ApplicationController
 
   # DELETE /tasks/1 or /tasks/1.json
   def destroy
-    @categories = Category.find(params[:category_id])
     @task.destroy
    redirect_to categories_path
   end

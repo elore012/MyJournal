@@ -31,14 +31,15 @@
 }
 #devise-main{
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    background-color: lightgreen;
+    justify-content: space-between;
+    flex-direction: row;
     box-shadow: 0 0 5px lightgreen;
     padding: 30px;
     font-size: 10px;
     margin-bottom: 20px;
-    color: black;
+    color: white;
+    background-color: rgb(123,43,1);
+    text-shadow: 0 0 8px white;
 }
 #signin-page{
     display:flex;

@@ -1,7 +1,7 @@
 <div id="main-create-task"
 <div>
 
-<div id="newtask-form>"
+
 <%= form_with model: [@categories,@categories.tasks.build] do |form| %>
   <% if task.errors.any? %>
     <div id="error_explanation">
@@ -14,7 +14,7 @@
       </ul>
     
   <% end %>
-  </div>
+  
   
  <div id="create-task">
   <div>
@@ -38,9 +38,13 @@
       <%= form.text_field :tasktime%>
 </div>
       <br>
-
-      
+      <div>
       <%=form.submit "Submit" %>
+      </div>
+      <br>
+      <div>
+      <button class="button" style="margin-left:0"> <%= link_to 'Cancel' , category_tasks_path %>
+      </div>
 </div>
 </div>
     <% end %>

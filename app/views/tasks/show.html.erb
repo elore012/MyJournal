@@ -48,7 +48,7 @@
     <div id="task-show-buttons">
         <div><button class="button"><%= link_to 'Edit', edit_category_task_path %></button> </div><br>
         <div><button class="button"><%= link_to 'Back to Task List', category_tasks_path %></button></div>
-        <div><button class="button"><%= link_to 'Delete', @categories , method: :delete, data: {confirm: "Delete this task?"}%></button></div>
+        <div><button class="button"><%= link_to 'Delete',  category_task_path(@task) , method: :delete, data: {confirm: "Delete this task?"}%></button></div>
         <div><button class="button"><%= link_to 'Homepage', categories_path %></button> </div><br>
        
     <div>
