@@ -1,7 +1,9 @@
 require "test_helper"
 
 class TaskTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test " should save task if taskname has more than 4 letters" do
+    task = Task.new(taskname:"testing")
+    assert task.save
+  end
 end
