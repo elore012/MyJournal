@@ -1,15 +1,23 @@
-<%= form_with(model: category) do |form| %>
-  <% if category.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
 
-      <ul>
-        <% category.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+
+
+<%= form_with(model: category) do |form| %>
+  
+<% if category.errors.any? %>
+<div style="display:flex;justify-content:center;">
+<div id="error_explanation">
+    <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+    <ul>
+      <% category.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+</div>
+</div>
+  
 <div style="display: flex; justify-content:center">
   <div id = "create-category">
     <div> 
@@ -37,5 +45,5 @@
          <button class="button" style= "margin-left=0; padding-left=0;"><%= link_to 'Back', categories_path %></button>
     </div>
 </div>
-</div>
+
 <% end %>

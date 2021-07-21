@@ -1,21 +1,21 @@
-<div id="main-create-task"
-<div>
 
 
 <%= form_with model: [@categories,@categories.tasks.build] do |form| %>
-  <% if task.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
 
+      <% if task.errors.any? %>
+      <div style="display:flex;justify-content:center">
+      <div id="error_explanation" >
+      <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
       <ul>
-  <% task.errors.each do |error| %>
+      <% task.errors.each do |error| %>
           <li><%= error.full_message %></li>
-  <% end %>
+      <% end %>
       </ul>
-    
-  <% end %>
-  
-  
+      <% end %>
+      </div>
+      </div>
+
+<div id="main-create-task">     
  <div id="create-task">
   <div>
   <h1>New Task</h1>
@@ -49,6 +49,6 @@
 </div>
     <% end %>
    
-</div>
+
 </div>
 </div>

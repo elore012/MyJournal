@@ -13,7 +13,8 @@
     margin-top: 40px;
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: lightgreen;
+    background-color: white;
+    color: black;
 }
 
 #main-create-task{
@@ -48,4 +49,14 @@
 #task-index-table td{
     
     padding-top: 40px;
+}
+#edit-task{
+    display:flex;
+    justify-content:center;
+  
+   
+}
+#tasktask{
+    box-shadow: 0 0 5px;
+    padding: 50px;
 }

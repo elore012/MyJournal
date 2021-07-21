@@ -2,7 +2,7 @@
 <div id="h1-index">
 <h1>Categories</h1>
 <div>
-<button id="add-category" class="button"><%= link_to 'New Category', new_category_path %></button>
+<button id="add-category" class="button"><%= link_to 'Create Category', new_category_path %></button>
 </div>
 </div>
 
@@ -19,7 +19,7 @@
     <% @categories.each do |category| %>
       <tr>
       <%if category.user == current_user %>
-        <td>Category id <%= category.id %></td>
+        <td>Category name: <%= category.categoryname %></td>
         <td><button class ="button"><%= link_to 'Show', category %></button></td>
         <td><button class ="button"><%= link_to 'Edit', edit_category_path(category) %></button></td>
         <td><button class ="button"><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Delete associated task first :(' } %></button></td>
