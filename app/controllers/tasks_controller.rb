@@ -33,7 +33,7 @@ class TasksController < ApplicationController
     @categories = current_user.categories.find(params[:category_id])
     @category = current_user.categories.find(params[:category_id])
     @task = @category.tasks.build(task_params)
-    @task.user_id = current_user.id
+  
 
       if @task.save
        
